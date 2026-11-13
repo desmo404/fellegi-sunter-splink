@@ -304,7 +304,7 @@ The way that lambda is estimated depends on 1) a set of deterministic rules whic
 
 For the deduplication of a single dataset $A$, the denominator is the number of distinct pairs $|A|(|A|-1)/2$.
 
-The maintainers of Splink mention in their \href{https://github.com/moj-analytical-services/splink/blob/master/docs/topic_guides/training/training_rationale.md}{training rationale guide} that the model is robust to a misestimated recall. The first reason is because all pairs get the same lambda so the order is unaffected by a misestimation, only the threshold is affected. The second reason depends on the effect size. Recall the total match weight for a pair (odds in log space):
+The maintainers of Splink mention that the model is robust to a misestimated recall. The first reason is because all pairs get the same lambda so the order is unaffected by a misestimation, only the threshold is affected. The second reason depends on the effect size. Recall the total match weight for a pair (odds in log space):
 \[
 w_i = \underbrace{\log_2 \frac{\lambda}{1-\lambda}}_{\text{prior weight}} + \sum_k \log_2 \frac{m_{k,\gamma_{ik}}}{u_{k,\gamma_{ik}}}
 \]
